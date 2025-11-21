@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      .wadah {
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        justify-items: center;
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+      /*
+      scale(angka) angka didalan artinya kali(misal tulis 2 maka 2 kali ukuran sebenarnya)
+      penulisannya bisa scale(x,y)-->scale(5): artinya x 5 kali y 5 kali
+      ....................................................
+
+      scaleX(angka),
+      scaleY(angka)
+      rotate(deg),
+      rotateX(deg),
+      rotateY(deg)
+      skew(deg),
+      skewX(deg),
+      skewY(deg)
+      translate(px),
+      translateX(px),
+      translate(px)
+      */
+      .kotak {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak2 {
+        width: 100px;
+        height: 100px;
+        background-color: greenyellow;
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak3 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin: 10px;
+        transition: 1s;
+        color: aliceblue;
+        text-align: center;
+      }
+      .kotak4 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 47, 158);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+
+      .kotak5 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(0, 97, 7);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+        color: aliceblue;
+      }
+
+      .kotak6 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(234, 255, 0);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak7 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 151, 47);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak8 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(4, 232, 122);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak9 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(47, 141, 255);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak10 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(168, 47, 255);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak11 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(0, 0, 0);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      .kotak12 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(232, 236, 181);
+        margin: 10px;
+        transition: 1s;
+        text-align: center;
+      }
+      /*scale(angka) --> scale(X,Y) atau scale(y&y)*/
+      .kotak:hover {
+        transform: scale(0.5, 1.5);
+      }
+
+      .kotak1:hover {
+        transform: scaleX(2);
+      }
+      .kotak2:hover {
+        transform: scaleY(2);
+      }
+      .kotak3:hover {
+        transform: rotateX(180deg);
+      }
+      .kotak4:hover {
+        transform: rotateY(180deg);
+      }
+      .kotak5:hover {
+        transform: rotate(180deg);
+      }
+      .kotak6:hover {
+        transform: rotate(180deg) rotateX(180deg) rotateY(180deg);
+      }
+      .kotak7:hover {
+        transform: skew(30deg);
+      }
+      .kotak8:hover {
+        transform: skewX(30deg);
+      }
+      .kotak9:hover {
+        transform: skewY(30deg);
+      }
+      .kotak10:hover {
+        transform: translate(30px, 30px);
+      }
+      .kotak11:hover {
+        transform: translateX(30px);
+      }
+      .kotak12:hover {
+        transform: translateY(30px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wadah">
+      <div class="kotak">0</div>
+      <div class="kotak1">1</div>
+      <div class="kotak2">2</div>
+      <div class="kotak3">3</div>
+      <div class="kotak4">4</div>
+      <div class="kotak5">5</div>
+      <div class="kotak6">6</div>
+      <div class="kotak7">7</div>
+      <div class="kotak8">8</div>
+      <div class="kotak9">9</div>
+      <div class="kotak10">10</div>
+      <div class="kotak11">11</div>
+      <div class="kotak12">12</div>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea optio velit
+      sint odio quas aut amet. Porro est veritatis hic commodi dolores, quas
+      doloribus sint reiciendis. Accusantium perspiciatis velit cum.
+    </p>
+  </body>
+</html>

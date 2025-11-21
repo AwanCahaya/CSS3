@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Face</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .local {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .gfont {
+        font-family: "Playwrite CZ", cursive;
+      }
+      @font-face {
+        font-family: "play";
+        src: url("ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf");
+      }
+      .fontface {
+        font-family: play, arial;
+      }
+      /* .woff lebih optimal untuk web */
+      @font-face {
+        font-family: "bungee_spiceregular";
+        src: url("bungeespice-regular-webfont.woff2") format("woff2"),
+          url("bungeespice-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .fontfacewoff {
+        font-family: bungee_spiceregular;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="local">Hello Word</h1>
+    <h1 class="gfont">Hello Word</h1>
+    <h1 class="fontface">Hello Word</h1>
+    <h1 class="fontfacewoff">Hello Word</h1>
+  </body>
+</html>
