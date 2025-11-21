@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      /* parameter yg ada di animasi 
+animasi : [name] [durasi] [fungsi] [delay] [iteration-count] [direction] [fill-mode] [play-state]
+
+name,durasi,fungsi,delay sama seperti transition
+
+[iteration-count]=> bisa di kasih nilai angka atau infinite(terus menerus)=>untuk menentukan sebarapa banyak animasi di ulang
+
+[direction]=> bisa normal, reverse(untuk membalik animasi belakang->depan),alternate(untuk animasi dari depan-> belakang->kedepan), alternate-reverse(animasi dari belakang->depan-belakang)
+
+[fill-mode] untuk menentukan jenis akhir animasi,forwards(untuk akhir tetap sesuai animasi akhir) 
+
+[play-state] untuk menjeda atau menjalankan animasi, bisa gunakan running untuk menjalankan animasi, paused untuk menjeda animasi
+
+*/
+
+      /*............MENGGUNAKAN TRANSITION............*/
+      .kotak-transition {
+        width: 200px;
+        height: 200px;
+        background-color: salmon;
+        transition: 2s ease;
+        margin-bottom: 10px;
+      }
+      .kotak-transition:hover {
+        width: 500px;
+      }
+      /*..........MENGGUNAKAN ANIMATION..........*/
+
+      .kotak-animation {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        margin-bottom: 10px;
+      }
+      .kotak-animation:hover {
+        animation: animasiKotak 2s ease;
+      }
+      @keyframes animasiKotak {
+        from {
+          width: 200px;
+        }
+        to {
+          width: 500px;
+        }
+      }
+      /*..........MENGGUNAKAN ANIMATION PERSEN..........*/
+
+      .kotak-animation-persen {
+        width: 200px;
+        height: 200px;
+        background-color: greenyellow;
+        margin-bottom: 10px;
+      }
+      .kotak-animation-persen:hover {
+        animation: animasiKotakPersen 2s ease;
+      }
+      /*..........MENGGUNAKAN ANIMATION ITERASION COUNT..........*/
+
+      .kotak-animation-iteration-count {
+        width: 200px;
+        height: 200px;
+        background-color: antiquewhite;
+        margin-bottom: 10px;
+      }
+      .kotak-animation-iteration-count:hover {
+        /*tulis angka untuk mengulang animasi berapa kali,tulis infinite untuk terus menerus */
+        animation: animasiKotakPersen 2s ease infinite;
+      }
+      /*..........MENGGUNAKAN ANIMATION PERSEN..........*/
+
+      .kotak-animation-direction {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin-bottom: 10px;
+      }
+      .kotak-animation-direction:hover {
+        /* direction normal untuk biasa,
+        reverse untuk membalik animasi,
+        alternate untuk animasi dari depan ke belakang dari belakang ke depan()bolak balik,
+        alternate-reverse untuk bolek belik tapi dari belakang dulu*/
+        animation: animasiKotakPersen 2s ease 3 alternate;
+      }
+
+      /*..........MENGGUNAKAN ANIMATION FILL MODE..........*/
+
+      .kotak-animation-fill-mode {
+        width: 200px;
+        height: 200px;
+        background-color: slateblue;
+        margin-bottom: 10px;
+      }
+      .kotak-animation-fill-mode:hover {
+        animation: animasiKotakPersen 2s ease 3 alternate forwards;
+      }
+
+      @keyframes animasiKotakPersen {
+        0% {
+          width: 200px;
+        }
+        50% {
+          width: 500px;
+          height: 300px;
+        }
+        100% {
+          width: 500px;
+          height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kotak-transition"></div>
+    <div class="kotak-animation"></div>
+    <div class="kotak-animation-persen"></div>
+    <div class="kotak-animation-iteration-count"></div>
+    <div class="kotak-animation-direction"></div>
+    <div class="kotak-animation-fill-mode"></div>
+  </body>
+</html>

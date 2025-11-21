@@ -6,9 +6,10 @@
     <title>Transition</title>
     <style>
       /*
-        properti Transition
+        parameter Transition
         transition([property], <durasi>, [fungsi], [delay])
         durasi: wajib di tulis satuannya harus (s/ms)
+        property: property apa saja yang bakal di lakukan transisi
         */
       body {
         margin: 0;
@@ -20,12 +21,115 @@
         background-color: salmon;
         transition: 1s;
       }
-      .kotak:hover {
+      .container {
+        width: 900px;
+        margin: 10px auto;
+        border: 2px solid black;
+      }
+      .container:hover .kotak {
         transform: rotate(180deg);
+        margin-left: 800px;
+        background-color: blue;
+      }
+      /*.................PROPERTY.....................*/
+      .kotak-property {
+        width: 100px;
+        height: 100px;
+        background-color: salmon;
+        /*jika di tambahkan property seperti ini maka yg akan di transisikan hanya yg di tulis di sini*/
+        transition: margin-left 1s;
+      }
+      .container2 {
+        width: 900px;
+        margin: 10px auto;
+        border: 2px solid black;
+      }
+      .container2:hover .kotak-property {
+        transform: rotate(180deg);
+        margin-left: 800px;
+        background-color: blue;
+      }
+      /*..............FUNGSI.......................*/
+      .kotak-fungsi {
+        width: 100px;
+        height: 100px;
+        background-color: salmon;
+        /*jika di tambahkan property seperti ini maka yg akan di transisikan hanya yg di tulis di sini*/
+        transition: 1s;
+        text-align: center;
+        line-height: 100px;
+        margin-bottom: 10px;
+      }
+      .container3 {
+        width: 900px;
+        margin: 10px auto;
+        border: 2px solid black;
+      }
+      .container3:hover .kotak-fungsi {
+        transform: rotate(720deg);
+        margin-left: 800px;
+        background-color: blue;
+      }
+
+      .kotak1 {
+        transition: 2s ease;
+      }
+      .kotak2 {
+        transition: 2s ease-in;
+      }
+      .kotak3 {
+        transition: 2s ease-out;
+      }
+      .kotak4 {
+        transition: 2s ease-in-out;
+      }
+      .kotak5 {
+        transition: 2s linear;
+      }
+      .kotak6 {
+        transition: 2s cubic-bezier(0.07, -0.51, 0.63, 1.39);
+      }
+      /*.................DELAY.....................*/
+      .kotak-delay {
+        width: 100px;
+        height: 100px;
+        background-color: salmon;
+        /*ini bacanya transisikan margin-left 3 detik, jeda 2 detik setelah itu jalankan transform 3 detik jeda 3 detik jalankan bg-color 500ms*/
+        transition: margin-left 3s, transform 3s 2s, background-color 500ms 3s;
+      }
+      .container4 {
+        width: 900px;
+        margin: 10px auto;
+        border: 2px solid black;
+      }
+      .container4:hover .kotak-delay {
+        transform: rotate(720deg);
+        margin-left: 800px;
+        background-color: blue;
       }
     </style>
   </head>
   <body>
-    <div class="kotak"></div>
+    <div class="container">
+      <h3>Hanya Durasi</h3>
+      <div class="kotak"></div>
+    </div>
+    <div class="container2">
+      <h3>Dengan Property</h3>
+      <div class="kotak-property"></div>
+    </div>
+    <div class="container3">
+      <h3>Dengan Fungsi</h3>
+      <div class="kotak-fungsi kotak1">ease</div>
+      <div class="kotak-fungsi kotak2">ease-in</div>
+      <div class="kotak-fungsi kotak3">ease-out</div>
+      <div class="kotak-fungsi kotak4">ease-in-out</div>
+      <div class="kotak-fungsi kotak5">linear</div>
+      <div class="kotak-fungsi kotak6">cubic-bezier</div>
+    </div>
+    <div class="container4">
+      <h3>Dengan Delay</h3>
+      <div class="kotak-delay"></div>
+    </div>
   </body>
 </html>
